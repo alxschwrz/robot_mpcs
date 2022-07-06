@@ -8,7 +8,7 @@ from robotmpcs.models.pandaMpcModel import PandaMpcModel
 
 
 def main():
-    N = 15
+    N = 20
     m = 3
     dt = 0.01
     #mpcModel = PlanarArmMpcModel(m, N, 4)
