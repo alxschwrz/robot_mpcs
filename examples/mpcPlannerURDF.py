@@ -49,12 +49,11 @@ def main():
     myMPCPlanner.concretize()
     q0 = np.array([0, 3])
     ob = env.reset(pos=q0)
-    #durations = []
     for ep in range(n_epochs):
         ob = env.reset()
-        staticGoalDict['desired_position'] = [np.random.uniform(0.0, 0.5),
-                                              np.random.uniform(-0.5, 0.5),
-                                              np.random.uniform(0.0, 0.5)]
+        staticGoalDict['desired_position'] = [np.random.uniform(0.2, 0.6),
+                                              np.random.uniform(-0.4, 0.4),
+                                              np.random.uniform(0.1, 0.8)]
         staticGoal = StaticSubGoal(name="goal1", contentDict=staticGoalDict)
         env.add_goal(staticGoal)
         myMPCPlanner.setGoal(staticGoal)
